@@ -5,7 +5,7 @@ let player = {
 
 let cards = [];
 let sum = 0;
-let lifesCount = 2;
+let lifesCount = 3;
 let hearts = "";
 let hasBlackJack = false;
 let isAlive = false;
@@ -142,7 +142,7 @@ function reset() {
   cardsEl.textContent = "Cards: ";
   sumEl.textContent = "Sum: ";
   player.chips = 20;
-  lifesCount = 2;
+  lifesCount = 3;
   cards = [];
   sum = 0;
   playerEl.textContent = player.name + ": $" + player.chips;
