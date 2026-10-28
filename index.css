@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 48px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background:
+    linear-gradient(rgba(0, 24, 15, 0.48), rgba(0, 24, 15, 0.48)),
+    url("images/table.png") center / cover no-repeat;
+  color: #fffdf5;
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", Arial, sans-serif;
+  font-weight: 600;
+  text-align: center;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+h1 {
+  margin: 0 0 4px;
+  color: #f2c45c;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-shadow: 0 3px 14px rgba(0, 0, 0, 0.75);
+}
+
+p {
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.5;
+}
+
+#message-el {
+  min-height: 1.7em;
+  margin-bottom: 8px;
+  color: #f2c45c;
+  font-size: 2.25rem;
+  font-style: italic;
+}
+
+#cards-el,
+#sum-el {
+  font-size: 1.2rem;
+}
+
+button {
+  width: min(240px, 100%);
+  min-height: 48px;
+  padding: 12px 20px;
+  border: 1px solid rgba(255, 241, 190, 0.55);
+  border-radius: 8px;
+  background: linear-gradient(180deg, #f2c45c, #d79d2d);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  color: #123c28;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-shadow: none;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    filter 160ms ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 16px rgba(0, 0, 0, 0.4);
+  filter: brightness(1.08);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.35);
+}
+
+button:focus-visible {
+  outline: 3px solid #fffdf5;
+  outline-offset: 4px;
+}
+
+#player-el {
+  margin-top: 8px;
+  color: #f2c45c;
+  font-size: 2rem;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  filter: grayscale(0.5);
+}
+
+@media (max-width: 480px) {
+  body {
+    min-height: 100vh;
+    gap: 10px;
+    padding: 36px 18px;
+    background-position: center;
+  }
+
+  #message-el {
+    max-width: 28ch;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  button {
+    transition: none;
+  }
+}
